@@ -1,0 +1,70 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-50);
+}
+
+.form-box {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-30);
+}
+
+.form-box:nth-child(3) {
+    align-items: flex-start;
+    margin-top: var(--spacing-30);
+}
+
+.form-label {
+    font-size: var(--font-medium);
+    font-weight: 600;
+    letter-spacing: .1rem;
+    width: 25%;
+}
+
+.form-box:nth-child(3) .form-label {
+    width: 9%;
+}
+
+.form-input {
+    font-size: var(--font-medium);
+    width: 100%;
+    padding: 1rem .5rem;
+    border: none;
+    border-bottom: .2rem solid #ff3333;
+}
+
+.form-input:focus {
+    outline: 0;
+    border-bottom: .2rem solid var(--secondary-solid);;
+}
+
+textarea {
+    font-family: var(--base-font);
+    font-size: var(--font-medium);
+    width: 100%;
+    padding: 1rem;
+    border: .2rem solid #ff3333;
+}
+
+textarea:focus {
+    outline-color: var(--secondary-solid);
+}
+
+.form-box-btn {
+    justify-content: flex-end;
+}
+
+.form-btn {
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    font-size: var(--font-medium);
+    transition: background .2s ease-in-out;
+    padding: var(--spacing-12) var(--spacing-28);
+    border: none;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background-color: var(--secondary-solid);
+}
