@@ -1,22 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { ShopPageComponent } from './pages/shop/shop-page/shop-page.component';
-import { ItemPageComponent } from './pages/shop/item-page/item-page.component';
-import { CartPageComponent } from './pages/shop/cart-page/cart-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { HomePageComponent } from './landing-page/home-page/home-page.component';
 
-import { AdminModule } from './admin/admin.module';
 
 
 const routes: Routes = [
-  { path: "home", component: HomePageComponent },
-  { path: "register", component: RegisterPageComponent},
-  { path: "login", component: LoginPageComponent},
-  { path: "shop", component: ShopPageComponent },
-  { path: "shop/:id", component: ItemPageComponent},
-  { path: "cart", component: CartPageComponent },
+  { path: "home", loadChildren: () => import('./landing-page/landing-page.module').then(m => m.LandingPageModule) },
+  { path: "register", loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
+  { path: "login", loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
+  { path: "shop", loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule) },
+  
 { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
 
   { path: "**", redirectTo: "home" }
