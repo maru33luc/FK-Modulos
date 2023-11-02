@@ -2,11 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './landing-page/home-page/home-page.component';
-
-
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
@@ -16,10 +12,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    
-    
-    
+    AppComponent,   
   ],
   imports: [
     BrowserModule,
@@ -29,8 +22,6 @@ import { AngularFireModule } from '@angular/fire/compat';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
    AngularFireModule,
-   
-
   ],
   providers: [],
   bootstrap: [AppComponent]

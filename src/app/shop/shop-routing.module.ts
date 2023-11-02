@@ -6,9 +6,11 @@ import { ShopPageComponent } from './pages/shop-page/shop-page.component';
 
 
 const routes: Routes = [
-  { path: "", component: ShopPageComponent },
-  { path: "shop/:id", component: ItemPageComponent},
-  { path: "cart", component: CartPageComponent },
+  { path: '', component: ShopPageComponent },
+  { path: "cart", component: CartPageComponent},
+  { path: ":id", component: ItemPageComponent},
+  {path: 'login', loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule)},
+  {path: 'register', loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule)},
 ];
 
 @NgModule({

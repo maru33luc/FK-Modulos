@@ -8,10 +8,10 @@ import { AdminMainComponent } from './admin-main/admin-main.component';
 import { AdminFormComponent } from './admin-form/admin-form.component';
 import { AdminNewFunkoComponent } from './admin-new-funko/admin-new-funko.component';
 import { AdminEditFunkoComponent } from './admin-edit-funko/admin-edit-funko.component';
-import { AdminMainPageComponent } from '../pages/admin/admin-main-page/admin-main-page.component';
-import { AdminNewFunkoPageComponent } from '../pages/admin/admin-new-funko-page/admin-new-funko-page.component';
-import { AdminEditFunkoPageComponent } from '../pages/admin/admin-edit-funko-page/admin-edit-funko-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminEditFunkoPageComponent } from './pages/admin-edit-funko-page/admin-edit-funko-page.component';
+import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
+import { AdminNewFunkoPageComponent } from './pages/admin-new-funko-page/admin-new-funko-page.component';
 
 
 @NgModule({
